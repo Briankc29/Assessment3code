@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://cdn.shoelace.style/latest/shoelace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <sl-button href="#home" variant="primary" pill class="nav-button">Home</sl-button>
+            <sl-button href="#about" variant="primary" pill class="nav-button">About</sl-button>
+            <sl-button href="#course" variant="primary" pill class="nav-button">Course</sl-button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+    <h1>Welcome! About Us!</h1>
+    <p>Providing quality educational content for everyone.</p>
+
+    <svg id="star-svg" viewBox="0 0 24 24" fill="none" stroke="#f0f0f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100" height="100">
+        <polygon points="12 2 15 8 22 9 17 14 18 21 12 18 6 21 7 14 2 9 9 8 12 2"></polygon>
+    </svg>
+</section>
+
+    <section id="course" class="course-details">
+        <h2>Course Details</h2>
+        <p>Welcome to the course overview. Explore the content and dive into the lessons!</p>
+        <div class="lesson-box" id="lesson1">Lesson 1: Introduction</div>
+        <div class="lesson-box" id="lesson2">Lesson 2: Advanced Topics</div>
+        <div class="lesson-box" id="lesson3">Lesson 3: Conclusion</div>
+
+        <sl-dialog label="Lesson 1: Introduction" id="lesson1-dialog">
+            <p><strong>How to Practice Mindfulness Meditation</strong></p>
+            <p>Learning mindfulness meditation is straightforward enough to practice on your own, but a teacher or program can also help you get started, particularly if you're practicing meditation for specific health reasons. Here are some simple steps to help you get started on your own.</p>
+            <p><strong>Get Comfortable</strong></p>
+            <p>Find a quiet and comfortable place. Sit in a chair or on the floor with your head, neck, and back straight but not stiff. It's also helpful to wear comfortable, loose clothing so you're not distracted.</p>
+            <p>But being that this practice can be done anywhere for any amount of time, a dress code is not required.</p>
+            <sl-button slot="footer" variant="primary" onclick="document.getElementById('lesson1-dialog').hide()">Close</sl-button>
+        </sl-dialog>
+        <sl-dialog label="Lesson 2: Advanced Topics" id="lesson2-dialog">
+            <p>Now we’re getting into the elite zone, of people who have meditated daily for more than a decade. Anyone can get here, if you make meditation not just a habit, but a lifestyle. That means not quitting, or taking a break. It means assuming meditation as a permanent and mandatory part of your daily routine, alongside sleep. Your brain will thank you.</p>
+            <p>One study compared 50 long-term meditators with average 20 years of meditation experience with 50 control subjects, and ran detailed brain scans to find how much brain matter was lost from age 24 to 77.</p>
+            <p>“These findings seem to suggest less age-related gray matter atrophy in long-term meditation practitioners.” — UCLA Study</p>
+            <p>More meditation means more brain left at old age. It’s clear to me which of those brains I’d like to have at seventy!</p>
+            <sl-button slot="footer" variant="primary" onclick="document.getElementById('lesson2-dialog').hide()">Close</sl-button>
+        </sl-dialog>
+        <sl-dialog label="Lesson 3: Conclusion" id="lesson3-dialog">
+            <p>The results of mindfulness meditation include improved self-control, objectivity, tolerance for emotions, flexibility, equanimity, concentration, and mental clarity. It also enhances emotional intelligence and promotes a kinder, more accepting, and compassionate relationship with oneself and others.</p>
+            <sl-button slot="footer" variant="primary" onclick="document.getElementById('lesson3-dialog').hide()">Close</sl-button>
+        </sl-dialog>
+    </section>
+    <section class="education-content">
+        <h2>Education Content for Today</h2>
+        <p>Sign up for daily content updates!</p>
+        <sl-button id="signup-button" variant="primary" pill>Sign Up Now</sl-button>
+    </section>
+<section id="gallery" class="image-gallery">
+    <h2>Image Gallery</h2>
+    <sl-carousel loop>
+        <sl-slide>
+            <img src="images/p1.PNG" alt="Description of Image 1" />
+        </sl-slide>
+        <sl-slide>
+            <img src="images/p2.PNG" alt="Description of Image 2" />
+        </sl-slide>
+        <sl-slide>
+            <img src="images/p3.PNG" alt="Description of Image 3" />
+        </sl-slide>
+        <sl-slide>
+            <img src="images/p4.PNG" alt="Description of Image 4" />
+        </sl-slide>
+    </sl-carousel>
+</section>
+    <footer>
+        <p>Need Help? Drop us a message below!</p>
+        <sl-input label="Your message" placeholder="Type your message here"></sl-input>
+        <sl-button id="send-button" variant="primary">Send</sl-button> <!-- Send Button -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

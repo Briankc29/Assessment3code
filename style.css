@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #202020;
+}
+header {
+    background-color: #202020;
+    padding: 1em;
+    text-align: center;
+}
+
+.nav-button {
+    color: #f0f0f0;
+    background-color: #008080;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    background-color: #f0f0f0; 
+    color: #008080;
+}
+
+header {
+    background-color: #202020; 
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+    display: inline-block;
+}
+
+sl-button::part(base) {
+    color: #f0f0f0;
+    background-color: #008080;
+}
+
+sl-button-group sl-button::part(base):hover {
+    background-color: #202020; 
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 2em;
+    background-color: #008080;
+    color: #f0f0f0; 
+}
+
+.hero-section h1 {
+    font-size: 2em;
+    animation: fadeIn 2s;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+}
+
+.course-details {
+    margin: 2em;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course-details h2 {
+    color: #202020;
+}
+
+.course-details p {
+    color: #202020;
+    margin-bottom: 1em;
+}
+
+/* Lesson Boxes */
+.lesson-box {
+    display: inline-block;
+    padding: 1em;
+    margin: 1em;
+    background-color: #008080;
+    color: #f0f0f0; 
+    border-radius: 8px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.lesson-box:hover {
+    background-color: #202020;
+}
+
+.education-content {
+    margin: 2em;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.education-content h2 {
+    font-size: 24px;
+    color: #202020; 
+}
+
+#signup-button {
+    background-color: #008080;
+    color: #f0f0f0;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 1em;
+    display: inline-block;
+}
+
+#signup-button:hover {
+    background-color: #202020;
+}
+
+/* Footer */
+footer {
+    background-color: #202020;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 1em;
+}
+
+footer p {
+    margin-bottom: 1em;
+}
+
+
+#send-button {
+    background-color: #008080; 
+    color: #f0f0f0; 
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 1em;
+    display: inline-block;
+}
+
+#send-button:hover {
+    background-color: #202020;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .hero-section, .course-details, .education-content {
+        padding: 1em;
+    }
+
+    .image-gallery {
+        width: 100%;
+    }
+
+    .lesson-box {
+        width: 100%;
+        margin: 0.5em 0;
+    }
+}
+.image-gallery {
+    margin: 2em auto;
+    width: 80%;
+    text-align: center;
+}
+
+.image-gallery h2 {
+    margin-bottom: 1em;
+    color: #202020;
+}
+
+.image-gallery sl-carousel {
+    max-width: 100%;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+#star-svg {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 2s ease-in-out forwards;
+    margin-top: 20px; 
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
